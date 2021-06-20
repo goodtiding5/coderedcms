@@ -13,7 +13,7 @@ alt="{{self_image.image.title}}"></amp-img>
 {% else %}
 
 <img src="{{self_image.url}}"
-class="w-100 {{self.settings.custom_css_class}}"
+class="{% firstof self.settings.custom_css_class w-100 %}"
 {% if self.settings.custom_id %}id="{{self.settings.custom_id}}"{% endif %}
 alt="{{self_image.image.title}}" />
 
